@@ -1,0 +1,15 @@
+body{
+    background-color: aquamarine;
+}
+#kerdesek{
+    margin: 0px 5px 5px;
+}
+h1{
+    text-shadow:2px 2px  chocolate;
+}
+#audi{
+    float:right;
+    margin-right: 45px;
+    box-shadow: 10px 10px black;
+    transform: rotate(30deg);
+}
