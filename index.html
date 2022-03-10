@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fájlbeolvasás</title>
+    <link rel="stylesheet" href="fajlbeolvasas.css">
+</head>
+<body>
+    <h1>Java Fileból való beolvasás JS DOM gyakorlás</h1>
+    <img src="a4b5.jpg" alt="audiiii" id="audi">
+    <code><pre>public class txtbeolvasas { 
+        public static List &ltString&gt nevek;
+        public static void main(String[] args) { 
+            getData();
+            System.out.println(nevek);
+        } 
+        public static void <span id="csere">???</span> () {
+            try {
+                nevek = Files.readAllLines(Paths.get("nevek.txt"), Charset.defaultCharset());
+                //nevek = Files.readAllLines(Paths.get("nevek.txt"), Charset.forName("UTF-8"));
+            } catch (IOException e) {
+                System.out.println("Hiba");
+            }
+        }</pre></code>
+        <div id="kerdesek">
+            <h3>1. feladat</h3>
+            <p>Készíts nyomógombot 1.feladat felirattal, ami bekért adatot ír a ??? helyére a public static void sorban</p>
+            <label for="f1">Kérem a megoldást: </label>
+            <input type="text" id="f1">
+            <button onclick="megoldas1()">1. Feladat</button>
+            <br>
+            <h3>2. feladat</h3>
+            <p><strong>Igaz vagy Hami?</strong>A fenti kód csak az első sort olvassa be a fileból</p>
+            <label for="igaz">Igaz</label>
+            <input type="radio" name="feladat2" id="igaz" checked>
+            <label for="hamis">Hamis</label>
+            <input type="radio" name="feladat2" id="hamis" >
+            <button id="f2">Megoldás</button>
+            <div id="ide"></div>
+        </div>
+        <script src="fajbeolvasas.js"></script>
+        <br>
+        <button id="myBtn">Gomb másképp (EventListener)</button>
+</body>
+</html>
